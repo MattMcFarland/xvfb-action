@@ -5,7 +5,7 @@ async function main() {
 
     try {
         if (process.platform == "linux") {
-            await exec.exec("sudo apt-get install -y xvfb");
+            await exec.exec("apt-get install -y xvfb");
         }
 
         const commands = core.getInput('run', { required: true }).split("\n");
